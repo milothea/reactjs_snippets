@@ -1,0 +1,74 @@
+@import 'src/css/variables.scss';
+@import 'src/css/colors.scss';
+
+.popover {
+  z-index: 750 !important;
+
+  :global {
+    .ant-popover-content {
+      width: 308px;
+
+      .ant-popover-inner {
+        padding: 0;
+        border: solid .01px transparent;
+      }
+    }
+  }
+
+  .popoverContent {
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    .spinner {
+      height: 60px;
+    }
+
+    .circlesEmptyState {
+      margin-top: 8px;
+      text-align: center;
+
+      .title {
+        @include body-14-medium;
+        color: $neutral-700;
+      }
+
+      .description {
+        @include body-16-compact;
+        color: $neutral-500;
+      }
+    }
+
+    .circlesList {
+      max-height: 145px;
+      overflow: auto;
+    }
+
+    .totalCapacity {
+      @include body-16-medium;
+    }
+
+    .defaultTextStyle,
+    .benchName,
+    .benchMessage {
+      @include body-16-compact;
+      color: $neutral-900;
+    }
+
+    .benchMessage {
+      color: $neutral-500;
+    }
+  }
+
+  .totalContainer {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.circlesIcon {
+  svg {
+    cursor: pointer;
+  }
+}

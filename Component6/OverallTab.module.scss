@@ -1,0 +1,129 @@
+@import 'src/css/variables.scss';
+@import 'src/css/colors.scss';
+@import 'src/components/EmployeesPageTabs/common.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+
+  .totalItems {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    .totalText {
+      @include body-16-compact;
+      font-weight: 500;
+      margin-right: auto;
+    }
+  }
+
+  .customView {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tableWrap {
+  :global {
+    th:nth-of-type(3) {
+      .ant-table-column-sorters {
+        justify-content: center;
+      }
+    }
+
+    th:nth-of-type(5) {
+      .ant-table-column-sorters {
+        justify-content: flex-end;
+      }
+    }
+
+    td:nth-of-type(5) {
+      &.ant-table-cell-ellipsis {
+        overflow: initial;
+      }
+    }
+  }
+
+  &.withDepartment {
+    :global {
+      th:nth-of-type(3) {
+        .ant-table-column-sorters {
+          justify-content: start;
+        }
+      }
+
+      th:nth-of-type(4) {
+        .ant-table-column-sorters {
+          justify-content: center !important;
+        }
+      }
+
+      th:nth-of-type(5) {
+        .ant-table-column-sorters {
+          justify-content: start;
+        }
+      }
+
+      th:nth-of-type(6) {
+        .ant-table-column-sorters {
+          justify-content: flex-end;
+        }
+      }
+
+      td:nth-of-type(6) {
+        &.ant-table-cell-ellipsis {
+          overflow: initial;
+        }
+      }
+    }
+  }
+
+  .emptyState {
+    padding-top: 24px;
+  }
+}
+
+.tableWrap {
+}
+
+.customTableWrap {
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.capacity {
+  @include body-16-compact;
+}
+
+.startDate {
+  @include body-14;
+  color: $neutral-700;
+}
+
+.noData {
+  @include body-16-compact;
+  color: $neutral-500;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.positionsList {
+  @include body-16-compact;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  >li {
+    @include Ellipsis;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/css/mixins.scss';
+@import 'src/components/CompetencyModel/CompetencyModel.module.scss';
+
+.select {
+  width: 490px !important;
+
+  :global {
+    .ant-select-selection-item {
+      @include body-16-compact;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.treeSelectPopup {
+  width: 490px !important;
+}

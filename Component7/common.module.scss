@@ -1,0 +1,61 @@
+@import 'src/css/colors.scss';
+@import 'src/css/variables.scss';
+@import 'src/css/mixins.scss';
+
+@mixin assignBlock {
+  .unassigned {
+    display: none;
+  }
+
+  .addPosition {
+    display: flex;
+  }
+}
+
+.addPosition {
+  display: none;
+}
+
+.table {
+  :global {
+    .ant-table-thead {
+      background-color: $neutral-100;
+
+      .ant-table-column-has-sorters {
+        background-color: $neutral-100 !important;
+      }
+
+      .ant-table-cell-ellipsis .ant-table-column-title {
+        @include Ellipsis;
+        display: block;
+      }
+    }
+
+    .ant-table-content::-webkit-scrollbar {
+      height: 8px !important;
+    }
+
+    .ant-table-content::-webkit-scrollbar-track {
+      background: $neutral-200;
+    }
+
+    .ant-table-content::-webkit-scrollbar-thumb {
+      background-color: $neutral-400;
+      border-radius: 50px;
+      border: none;
+    }
+  }
+
+  :global(.ant-table-cell-row-hover) {
+    .assignWrap {
+      @include assignBlock;
+      max-width: 200px !important;
+      width: fit-content;
+      display: grid;
+    }
+  }
+}
+
+.assignWrapActive {
+  @include assignBlock;
+}

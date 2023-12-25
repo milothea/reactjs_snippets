@@ -1,0 +1,59 @@
+@import 'src/css/variables.scss';
+@import 'src/css/colors.scss';
+
+.container {
+  height: 190px;
+}
+
+.checkboxGroupContainer {
+  display: flex;
+  height: 150px;
+  flex-flow: column wrap;
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  margin-right: 20px;
+  margin-top: 8px;
+
+  :global {
+    .ant-checkbox-checked {
+      .ant-checkbox-inner {
+        filter: none;
+      }
+    }
+    .ant-checkbox-disabled.ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background-color: $neutral-300 !important;
+        border-color: $neutral-300 !important;
+      }
+    }
+    .ant-checkbox-wrapper:hover.ant-checkbox-wrapper-checked {
+      .ant-checkbox-disabled {
+        .ant-checkbox-inner {
+          background-color: $neutral-300 !important;
+          border-color: $neutral-300 !important;
+        }
+      }
+    }
+  }
+
+  .checkboxWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 4px 0 4px 0;
+
+    .label {
+      padding-left: 8px;
+      &.disabled {
+        color: $neutral-500;
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.label {
+  @include body-16-compact;
+}

@@ -1,0 +1,45 @@
+@import 'src/components/EmployeesPageTabs/common.module.scss';
+@import 'src/css/variables.scss';
+@import 'src/css/mixins.scss';
+@import 'src/css/colors.scss';
+
+.divisionSelect {
+  width: 240px;
+
+  :global {
+    .ant-select-selection-item-content {
+      @include body-16;
+      width: 192px;
+    }
+  }
+}
+
+.divisionPopup {
+  z-index: 850;
+
+  :global {
+    .ant-select-tree-treenode .ant-select-tree-switcher-noop {
+      margin-left: 20px;
+    }
+  }
+}
+
+.lastAssessment {
+  width: 100%;
+  text-align: right;
+}
+
+.competenceHeader {
+  @include heading-3;
+  @include Ellipsis;
+  color: $neutral-500;
+}
+
+.noCompetence {
+  @include helpertext-14;
+  color: $neutral-0;
+}
+
+.tabLink {
+  color: $neutral-700 !important;
+}

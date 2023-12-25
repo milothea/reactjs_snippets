@@ -1,0 +1,79 @@
+@import 'src/css/variables.scss';
+@import 'src/css/colors.scss';
+
+.container {
+  .stepHeader {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-bottom: 16px;
+
+    .title {
+      @include heading-3;
+      color: $neutral-700;
+    }
+  }
+
+  .span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $neutral-700;
+  }
+}
+
+.table {
+  :global {
+    .ant-table-thead .ant-table-cell:not(:first-of-type) {
+      border-left: 1px solid $neutral-300;
+    }
+  }
+}
+
+.requirementsPopup {
+  :global {
+      width: 200px !important;
+      z-index: 9;
+
+      .ant-select-selection-item[title='Not specified'] {
+          @include body-16-compact;
+          color: $neutral-500 !important;
+      }
+  }
+}
+
+.mergedRow {
+  :global {
+    .ant-table-cell {
+      border-left-color: $blue-50 !important;
+      font-weight: 500 !important;
+
+      &:nth-child(2):not(:empty) {
+        border-left-color: $neutral-300 !important;
+        & + .ant-table-cell {
+          border-left: 1px solid $neutral-300 !important;
+        }
+      }
+    }
+  }
+}
+
+.weightCell,
+.weightTitle {
+  text-align: center !important;
+}
+
+.weightTitle {
+  white-space: nowrap;
+}
+
+.settingsButton {
+  margin-left: 4px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}

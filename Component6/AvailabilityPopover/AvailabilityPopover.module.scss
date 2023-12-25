@@ -1,0 +1,76 @@
+@import 'src/css/variables.scss';
+@import 'src/css/colors.scss';
+@import 'src/components/EmployeesPageTabs/OverallTab/OverallTab.module.scss';
+
+.popover {
+
+  :global {
+    .ant-popover-content {
+      width: 320px;
+    }
+
+    .ant-popover-inner {
+      box-sizing: border-box;
+      padding: 0;
+      border: solid .01px transparent;
+    }
+  }
+
+  .popupContent {
+    .label {
+      @include body-16-compact;
+      color: $neutral-700;
+      padding-bottom: 4px;
+    }
+
+    .weightInput {
+      width: 136px;
+    }
+  }
+
+  .editIcon {
+    svg {
+      fill: $neutral-500;
+      width: 20px;
+      height: 20px;
+    }
+  
+    svg:hover {
+      fill: $blue-500;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    margin: 12px 16px;
+  }
+
+  .description {
+    @include body-16;
+    margin: 16px 15px;
+  }
+
+  .inputs {
+    margin: 16px;
+  }
+
+  .button {
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+
+.availability {
+  @include body-16-compact;
+}
+
+.availabilityDate {
+  @include body-14;
+  text-align: end;
+  color: $neutral-700;
+}
+
+.noData {
+  color: $neutral-500;
+}
