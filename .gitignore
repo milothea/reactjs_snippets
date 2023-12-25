@@ -1,0 +1,10 @@
+# system files
+tmp
+.DS_Store
+
+# IDEA files
+.idea
+
+# Dependency directories
+node_modules/
+jspm_packages/
